@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- Define que o documento usa HTML5 -->
+
+<html lang="pt-BR">
+<!-- Início do documento HTML e define o idioma como português do Brasil -->
+
+<head>
+
+<meta charset="UTF-8">
+<!-- Define a codificação de caracteres para suportar acentos -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Faz o site se adaptar a celulares e telas menores -->
+
+<title>Festival de Música 2026</title>
+<!-- Título que aparece na aba do navegador -->
+
+<style>
+
+/* Estilo geral da página */
+body{
+margin:0; /* Remove margens padrão */
+font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
+background:#111; /* Cor de fundo escura */
+color:#fff; /* Cor do texto branca */
+}
+
+/* Estilo do cabeçalho com imagem */
+header{
+     background:url("data:image/png;base64,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") center/cover no-repeat;
+/* Define uma imagem de fundo centralizada cobrindo o espaço */
+
+height:60vh; /* Altura do cabeçalho (60% da altura da tela) */
+
+display:flex; /* Usa flexbox para alinhar conteúdo */
+align-items:center; /* Centraliza verticalmente */
+justify-content:center; /* Centraliza horizontalmente */
+text-align:center; /* Centraliza o texto */
+}
+
+/* Estilo do título principal */
+header h1{
+font-size:3rem; /* Tamanho grande da fonte */
+background:rgba(0,0,0,0.6); /* Fundo escuro transparente */
+padding:20px; /* Espaçamento interno */
+border-radius:10px; /* Cantos arredondados */
+}
+
+/* Container principal do conteúdo */
+.container{
+max-width:1000px; /* Largura máxima */
+margin:auto; /* Centraliza na página */
+padding:40px 20px; /* Espaçamento interno */
+}
+
+/* Área com informações do evento */
+.info{
+display:grid; /* Usa grid layout */
+grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+/* Cria colunas responsivas */
+
+gap:20px; /* Espaço entre os elementos */
+margin-top:20px; /* Espaço acima */
+}
+
+/* Cards com informações */
+.card{
+background:#1e1e1e; /* Fundo escuro */
+padding:20px; /* Espaçamento interno */
+border-radius:10px; /* Bordas arredondadas */
+}
+
+/* Seção do line-up */
+.lineup{
+margin-top:40px; /* Espaço acima da seção */
+}
+
+/* Remove estilo padrão da lista */
+.lineup ul{
+list-style:none;
+padding:0;
+}
+
+/* Estilo de cada artista na lista */
+.lineup li{
+padding:10px;
+border-bottom:1px solid #333; /* Linha separadora */
+}
+
+/* Botão de compra */
+.btn{
+display:inline-block; /* Permite aplicar largura e altura */
+margin-top:20px; /* Espaço acima */
+padding:15px 25px; /* Espaçamento interno */
+background:#ff2e63; /* Cor do botão */
+color:white; /* Cor do texto */
+text-decoration:none; /* Remove sublinhado */
+border-radius:8px; /* Bordas arredondadas */
+font-weight:bold; /* Texto em negrito */
+}
+
+/* Efeito ao passar o mouse no botão */
+.btn:hover{
+background:#ff4f7a;
+}
+
+/* Rodapé */
+footer{
+text-align:center; /* Centraliza texto */
+padding:20px; /* Espaçamento interno */
+background:#000; /* Fundo preto */
+margin-top:40px; /* Espaço acima */
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<!-- Cabeçalho principal do evento -->
+<h1>Festival de Música 2026</h1>
+</header>
+
+<section class="container">
+<!-- Área principal com conteúdo -->
+
+<h2>Sobre o Evento</h2>
+<!-- Descrição do evento -->
+<p>
+Venha curtir uma noite incrível com artistas nacionais e internacionais.
+Um evento cheio de música, energia e experiências inesquecíveis.
+</p>
+
+<div class="info">
+<!-- Área com informações básicas do evento -->
+
+<div class="card">
+<h3>Data</h3>
+<p>15 de Agosto de 2026</p>
+</div>
+
+<div class="card">
+<h3>Local</h3>
+<p>Parque de Eventos - São Paulo</p>
+</div>
+
+<div class="card">
+<h3>Horário</h3>
+<p>22:00 às 00:00</p>
+</div>
+
+</div>
+
+<div class="lineup">
+<!-- Lista de artistas -->
+<h2>Line-up</h2>
+
+<ul>
+<li>Marron Five
+
+     Maroon 5 é uma banda norte-americana de pop rock de Los Angeles,
+     Califórnia.[1][2][3] O grupo é composto pelo vocalista principal e
+     guitarrista Adam Levine, pelo guitarrista base e
+     tecladista Jesse Carmichael, pelo guitarrista principal James Valentine,
+     pelo baterista Matt Flynn, pelo tecladista PJ Morton
+     e pelo baixista e tecladista Sam Farrar.
+     
+</li>
+</div>
+
+<!-- Botão de compra de ingressos -->
+<a class="btn" href="#">Comprar Ingressos</a>
+
+</section>
+
+<footer>
+<!-- Rodapé da página -->
+<p>© 2026 Festival de Música | Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
