@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tecnoinfo vieira</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff8f0;
+}
+
+header {
+    background-color: #d62828;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #f77f00;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+
+}
+
+.item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.price {
+    color: #d62828;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #003049;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea, button {
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #d62828;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a4161a;
+}
+
+header{
+background:url("data:image/png;base64,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") center/cover no-repeat;
+
+
+</style>
+</head>
+
+
+<body>
+    
+            <div class="item">
+                <img src="img/xiaomi1.jpg" alt="xiaomi1">
+                <h3>xiaomi</h3>
+                <p>Smartphone Celular Xiaomi Redmi Note 15 4G 256GB 8GB
+                    mais 8GB Lançamento 2026 Câmera 108MP 20MP AMOLED
+                    120Hz FHD plus Design Premium Água e Poeira</p>
+                <p class="price">R$ 1.529,92</p>
+                <a class="btn" href="#">Comprar</a>
+
+            </div>
+    
+            <div class="item">
+                <img src="img/xiaomi2.jpg" alt="xiaomi2">
+                <h3>xiaomi</h3>
+                <p>Smartphone Celular Xiaomi POCO X7 5G, 256GB, 8GB RAM,
+                    Câmera 64MP, Frontal, Android 14, Tela 6,67 polegadas
+                    AMOLED 120Hz, Bateria 5000mAh, Dual SIM</p>
+                <p class="price">R$ 1.885,29</p>
+                <a class="btn" href="#">Comprar</a>
+
+            </div>
+    
+            <div class="item">
+                <img src="img/xiaomi3.jpg" alt="xiaomi3">
+                <h3>xiaomi</h3>
+                <p>Smartphone Xiaomi POCO C71, 64GB, 3GB RAM,
+                    Câmera 50MP, Android 14, Tela 6,74 polegadas HD 90Hz,
+                    Bateria 5000mAh, Dual SIM, DOURADO</p>
+                <p class="price">R$ 645,85</p>
+                <a class="btn" href="#">Comprar</a>
+
+            </div>
+
+            <div class="item">
+                <img src="img/xiaomi4.jpg" alt="xiaomi4">
+                <h3>xiaomi</h3>
+                <p>Redmi Note 15 Pro 5g 512gb</p>
+                <p class="price">R$ 4.184,99</p>
+                <a class="btn" href="#">Comprar</a>
+
+            </div>
+    
+            <div class="item">
+                <img src="img/xiaomi5.jpg" alt="xiaomi5">
+                <h3>xiaomi</h3>
+                <p>Xiaomi POCO X7 Pro 5G 512GB - 12GB Ram
+                    (Yellow) Amarelo - Pocophone</p>
+                <p class="price">R$ 2.736,10</p>
+                <a class="btn" href="#">Comprar</a>
+
+            </div>
+    
+    
+        </div>
+    </section>
+    
+<footer>
+    <p>&copy; 2026 Tecnoinfo & Cia - Todos os direitos reservados.</p>
+</footer>
+    
+    
+</body>
+</html>
